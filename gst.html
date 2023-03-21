@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script >
+   	 function a()
+            { 
+              var GSTP = document.getElementById("gst").value;
+              var a = parseInt(GSTP);
+              var PAYFEES = document.getElementById("pay_fees").value;
+              var b   =parseInt(PAYFEES);
+              var c = b*a/100;
+              var d = c+b;
+              var e = c/2;
+              var f = c/2;
+              document.getElementById("total").value=d;
+              document.getElementById("cgst").value=f;
+              document.getElementById("sgst").value=e;
+              document.getElementById("includegst").value=c;
+             }
+   </script>
+</head>
+<body>
+     <table>
+     	<td><b>Pay Fees</b></td>
+    	 	<td><input type="text" name="" id="pay_fees"></td>
+    	 </tr>
+     <tr>
+    	 	<td><b>GST Include</b><select onchange="a()" id="gst">
+    	 		                <option  value="">Select GST</option>
+    	 		                <option  value="5%">5%</option>
+    	 		                <option value="18%">18%</option>
+    	 		                <option value="28%">28%</option>
+    	 	                  </select></td>
+    	 	<td><input type="text" name="" id="includegst" readonly></td>
+    	 </tr>
+    	 <tr>
+    	 	<td><b>CGST(%)</b></td>
+    	 	<td><input type="text" name="" readonly id="cgst"></td>
+    	 </tr>
+    	 <tr>
+    	 	<td><b>SGST(%)</b></td>
+    	 	<td><input type="text" name="" readonly id="sgst"></td>
+    	 </tr>
+    	 <tr>
+    	 	<td><b>Total Fee Includeing tax</b></td>
+    	 	<td><input type="text" name="" readonly id="total"></td>
+    	 </tr>
+    </table>	
+     
+</body>
+</html>
